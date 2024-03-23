@@ -9,8 +9,6 @@ function startFibonacci() {
     console.log(valor);
 
     nextValue = valor + nextValue;
-
-    
    
     if(valueEntered > 70) {
         alert('[Erro]: digite um valor menor do que 70');
