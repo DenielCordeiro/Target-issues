@@ -1,80 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/index.css">
-</head>
-<body>
-    <div class="buttons">
-        <button onclick="startWhile()">Exercise 1</button>
-        <button onclick="startFibonacci()">Exercise 2</button>
-        <button onclick="logicalSequencing()">Exercise 3</button>
-        <button onclick="textExercise4()">Exercise 4</button>
-        <button onclick="infoString()">Exercise 5</button>
-    </div>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/index.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="buttons">
+            <button onclick="startWhile()">Exercise 1</button>
+            <button onclick="infoValue()">Exercise 2</button>
+            <button onclick="logicalSequencing()">Exercise 3</button>
+            <button onclick="textExercise4()">Exercise 4</button>
+            <button onclick="infoString()">Exercise 5</button>
+        </div>
 
-    
-    <div class="results"> 
-        <div class="exercise1 exercise1Active">
-            <div class="question">
-                <p> <b>Observe o trecho de código abaixo:</b> </p>
-                <p>int INDICE = 13, SOMA = 0, K = 0;</p>
-                <p>enquanto K &lt; INDICE faça</p>
-                <P>{</P>
-                <p>K = K + 1;</p>
-                <p>SOMA = SOMA + K;</p>
-                <p>}</p> 
-                <p>imprimir(SOMA);</p>  
+        <div class="results"> 
+            <div class="exercise1 exercise1Active">
+                <div class="question">
+                    <p> <b>Observe o trecho de código abaixo:</b> </p>
+                    <p>int INDICE = 13, SOMA = 0, K = 0;</p>
+                    <p>enquanto K &lt; INDICE faça</p>
+                    <P>{</P>
+                    <p>K = K + 1;</p>
+                    <p>SOMA = SOMA + K;</p>
+                    <p>}</p> 
+                    <p>imprimir(SOMA);</p>  
+                </div>
+                
+                <div class="result">
+                    <div class="sum"></div>
+                </div>
+            </div>
+
+            <div class="exercise2 exercise2Active">
+                <hr>
+
+                <div class="question">
+                    <p>
+                        Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre será a soma dos 2 valores anteriores
+                        (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem que desejar onde, informado um número,
+                        ele calcule a sequência de Fibonacci e retorne uma mensagem avisando se o número informado pertence ou não a sequência.
+                    </p>
+
+                    <p> <b>IMPORTANTE:</b> </p>
+                    
+                    <p>Esse número pode ser informado através de qualquer entrada de sua preferência ou pode ser previamente definido no código;</p>
+                </div>
+
+                <div class="result">
+                    <div class="valorforFibonacci my-2">
+                        <label for="value-entered" class="valor-info">Digite algum número menor que 70, depois pressione a tecla: "Enviar".</label><br><br>
+                        <input id="value-entered" type="text" class="value-entered">
+                        <button class="send" onclick="getValue()">Enviar</button>
+                    </div>
+
+                    <div class="show-value-entered"></div>
+                    <div class="info-sequence"></div>
+                    <div class="sequence-values"></div>
+                    <div class="final-message"></div>
+                    <div class="compare-value"></div>
+                </div>
+            </div>
+
+            <div class="exercise3 exercise3Active">
+                <hr>
+
+                <div class="question">
+                    <h3> Descubra a lógica e complete o próximo elemento:</h3>
+                </div>
+
+                <div class="result">
+                    <div class="letter-a"></div>
+                    <div class="letter-b"></div>
+                    <div class="letter-c"></div>
+                    <div class="letter-d"></div>
+                    <div class="letter-e"></div>
+                    <div class="letter-f"></div>
+                </div>
+            </div>
+
+            <div class="exercise4 exercise4Active">
+                <hr>
+
+                <div class="question">
+                    <p>Você está em uma sala com três interruptores, cada um conectado a uma lâmpada em uma sala diferente.</p>
+                    <p>Você não pode ver as lâmpadas da sala em que está, mas pode ligar e desligar os interruptores quantas vezes quiser.</p>
+                    <p>Seu objetivo é descobrir qual interruptor controla qual lâmpada.</p>
+                    <p>Como você faria para descobrir, usando apenas duas idas até uma das salas das lâmpadas, qual interruptor controla cada lâmpada?</p>
+                </div>
+
+                <div class="resutl">
+                    <p> <b>Primeira ida:</b> </p>
+                    <ul>
+                        <li>Deixe o 1° interruptor acesso</li>
+                        <li>Deixe o 2° interruptor apagado</li>
+                        <li>Deixe o 3º interruptor acesso por alguns minutos e depois apague.</li>
+                    </ul>
+
+                    <p> <b>Segunda ida:</b> </p>
+                    <ul>
+                        <li>Verifique a temperatura das lampadâs<li>
+                        <li>Se a lâmpada estiver acesa, é o interruptor 1</li>
+                        <li>Se a lâmpada estiver apagada e fria, é o interruptor 2</li>
+                        <li>Se a lâmpada estiver apagada, mas quente, é o interruptor 3</li>
+                    </ul>
+                </div>
             </div>
             
-            <div class="result">
-                <div class="sum"></div>
+            <div class="exercise5 exercise5Active">
+                <hr>
+
+                <div class="question"></div>
+
+                <div class="informations-text">
+                    <label for="text-entered" class="text-info">Digite alguma palavra, depois pressione a tecla: "Enviar".</label>
+                    <input id="text-entered" type="text" class="text-entered">
+
+                    <button class="send" onclick="getString()">Enviar</button>
+                </div>
+
+                <div class="result"></div>
             </div>
-        </div>
-
-        <div class="exercise2 exercise2Active">
-            <div class="question"></div>
-
-            <div class="result">
-                <div class="value-entered"></div>
-                <div class="info-sequence">Sequencia de fibonacci: </div>
-                <div class="sequence-values"></div>
-                <div class="final-message"></div>
-            </div>
-        </div>
-
-        <div class="exercise3 exercise3Active">
-            <div class="question"></div>
-
-            <div class="result"></div>
-        </div>
-
-        <div class="exercise4 exercise4Active">
-            <h1>Text</h1>
         </div>
         
-        <div class="exercise5 exercise5Active">
-            <div class="question"></div>
+    </body>
 
-            <div class="informations-text">
-                <h3 class="text-info">Digite alguma palavra, depois pressione a tecla: "Enviar".</h3>
-                <input type="text" id="text-entered">
-
-                <button class="send" onclick="getString()">Enviar</button>
-            </div>
-
-            <div class="result"></div>
-            
-        </div>
-    </div>
-    
-</body>
-
-<script src="./1/exercise1.js"></script>
-<script src="./2/exercise2.js"></script>
-<script src="./3/exercise3.js"></script>
-<script src="./4/exercise4.js"></script>
-<script src="./5/exercise5.js"></script>
+    <script src="./1/exercise1.js"></script>
+    <script src="./2/exercise2.js"></script>
+    <script src="./3/exercise3.js"></script>
+    <script src="./4/exercise4.js"></script>
+    <script src="./5/exercise5.js"></script>
 </html>

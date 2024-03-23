@@ -5,14 +5,20 @@ function infoString() {
 }
 
 function getString() {
-    const textEntered = document.querySelector('#text-entered');
+    const textEntered = document.querySelector('.text-entered');
     const builtText = String(textEntered.value);
 
     this.transformString(builtText);
 }
 
 function transformString(text) {
+    let invertedText = '';
+
     console.log(text);
-    // const boxString = [];
-    // boxString.push(Name);
+
+    for(let i = text.length - 1; i >= 0; i--) {
+        invertedText += text[i];
+    }
+
+    console.log(invertedText);
 }
