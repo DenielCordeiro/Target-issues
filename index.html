@@ -12,13 +12,61 @@
         <button onclick="startFibonacci()">Exercise 2</button>
         <button onclick="logicalSequencing()">Exercise 3</button>
         <button onclick="textExercise4()">Exercise 4</button>
-        <button onclick="startWhile()">Exercise 5</button>
+        <button onclick="infoString()">Exercise 5</button>
     </div>
 
     
     <div class="results"> 
+        <div class="exercise1 exercise1Active">
+            <div class="question">
+                <p> <b>Observe o trecho de código abaixo:</b> </p>
+                <p>int INDICE = 13, SOMA = 0, K = 0;</p>
+                <p>enquanto K &lt; INDICE faça</p>
+                <P>{</P>
+                <p>K = K + 1;</p>
+                <p>SOMA = SOMA + K;</p>
+                <p>}</p> 
+                <p>imprimir(SOMA);</p>  
+            </div>
+            
+            <div class="result">
+                <div class="sum"></div>
+            </div>
+        </div>
+
+        <div class="exercise2 exercise2Active">
+            <div class="question"></div>
+
+            <div class="result">
+                <div class="value-entered"></div>
+                <div class="info-sequence">Sequencia de fibonacci: </div>
+                <div class="sequence-values"></div>
+                <div class="final-message"></div>
+            </div>
+        </div>
+
+        <div class="exercise3 exercise3Active">
+            <div class="question"></div>
+
+            <div class="result"></div>
+        </div>
+
         <div class="exercise4 exercise4Active">
             <h1>Text</h1>
+        </div>
+        
+        <div class="exercise5 exercise5Active">
+            <div class="question"></div>
+
+            <div class="informations-text">
+                <h3 class="text-info">Digite alguma palavra, depois pressione a tecla: "Enviar".</h3>
+                <input type="text" id="text-entered">
+
+                <button class="send" onclick="getString()">Enviar</button>
+            </div>
+
+            <div class="result"></div>
+            
         </div>
     </div>
     

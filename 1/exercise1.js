@@ -1,4 +1,8 @@
+let divText1 = document.querySelector('.exercise1');
+
 function startWhile() {
+    divText1.classList.toggle('exercise1Active');
+
     const INDICE = 13;
     let SOMA = 0;
     let K = 0;
@@ -8,5 +12,7 @@ function startWhile() {
         SOMA = SOMA + K;
     }
 
-    console.log('Soma: ', SOMA);
+    let sum = document.querySelector('.sum');
+    let textSum =  document.createTextNode("Soma: " + SOMA + " ");
+    sum.appendChild(textSum);
 }

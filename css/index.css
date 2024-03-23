@@ -1,3 +1,19 @@
+.exercise1Active {
+    display: none;
+}
+
+.exercise2Active {
+    display: none;
+}
+
+.exercise3Active {
+    display: none;
+}
+
 .exercise4Active {
+    display: none;
+}
+
+.exercise5Active {
     display: none;
 }
